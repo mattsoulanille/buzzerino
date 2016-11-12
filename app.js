@@ -12,7 +12,7 @@ var COOKIE_SECRET = sha1(Math.random() + 'admin_token'),
 	COOKIE_NAME = 'admin_token',
 	HOST = '0.0.0.0',
 	PORT = 4200,
-	ADMIN_PASSWORD = 'oppdal'
+	ADMIN_PASSWORD = 'nerdhouse'
 
 var admin_socket = null
 
