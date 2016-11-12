@@ -107,7 +107,8 @@ var teams = io
 			debug('No admin connected yet')
 			return
 		}
-		admin.emit('team-connect', { teams: teams.sockets.length })
+
+	    admin.emit('team-connect', { 'teams': Object.keys(teams.sockets).length })
 
 		socket.on('buzz-from', function(data) {
 			var buzzTime = new Date().getTime()
@@ -118,7 +119,7 @@ var teams = io
 
 		socket.on('disconnect', function() {
 			debug('Team disconnected')
-			admin.emit('team-disconnect', { teams: teams.sockets.length })
+			admin.emit('team-disconnect', { 'teams': teams.sockets.length })
 		})
 	})
 
