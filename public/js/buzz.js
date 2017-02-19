@@ -22,7 +22,13 @@ socket.on('admin-disconnect', function() {
 })
 
 // User actions
-$(buzzerButton).on('click', function(e) {
+
+$(buzzerButton).on('mousedown', function(e) {
+	socket.emit('buzz-from', { name: name })
+	invertBuzzerButton(true)
+})
+
+$(buzzerButton).on('touchstart', function(e) {
 	socket.emit('buzz-from', { name: name })
 	invertBuzzerButton(true)
 })
