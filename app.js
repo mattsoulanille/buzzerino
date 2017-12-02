@@ -40,7 +40,7 @@ app.get('/buzz', function(req, res) {
 	if (!admin_socket) {
 		debug('Tried to access /buzz when no admin connected')
 		res.status(400)
-		res.render('error.html', { error: 'Buzzerino Adminirano has not connected yet' })
+		res.render('error.html', { error: 'Buzzer Admin has not connected yet' })
 		return
 	}
 

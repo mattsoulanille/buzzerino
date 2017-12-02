@@ -13,12 +13,12 @@ socket.on('reset', function(data) {
 
 socket.on('admin-reconnect', function() {
 	invertBuzzerButton(false)
-	Materialize.toast('Buzzerino Adminirano reconnected', 4000)
+	Materialize.toast('Buzzer Admin reconnected', 4000)
 })	
 
 socket.on('admin-disconnect', function() {
 	invertBuzzerButton(true)
-	Materialize.toast('Buzzerino Adminirano disconnected', 4000)	
+	Materialize.toast('Buzzer Admin disconnected', 4000)	
 })
 
 // User actions
